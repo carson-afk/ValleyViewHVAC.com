@@ -22,7 +22,7 @@ const BRAND = {
   founded: 2019,
   lat: 44.9429,
   lng: -123.0351,
-  site: 'https://valleyviewhvac.com/valleyviewhvac',
+  site: 'https://valleyviewhvac.com',
 };
 
 const FONTS = `<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -362,38 +362,90 @@ const SERVICES = [
   },
 ];
 
-/* ----- Cities (for GEO landing pages) — match valleyviewhvac.com sitemap ----- */
+/* ----- Cities (for GEO landing pages) ----- */
 const CITIES = [
+  // Yamhill County
   { slug: 'amity-or',          name: 'Amity',          county: 'Yamhill County' },
-  { slug: 'aumsville-or',      name: 'Aumsville',      county: 'Marion County' },
-  { slug: 'aurora-or',         name: 'Aurora',         county: 'Marion County' },
-  { slug: 'dallas-or',         name: 'Dallas',         county: 'Polk County' },
+  { slug: 'carlton-or',        name: 'Carlton',        county: 'Yamhill County' },
   { slug: 'dayton-or',         name: 'Dayton',         county: 'Yamhill County' },
   { slug: 'dundee-or',         name: 'Dundee',         county: 'Yamhill County' },
-  { slug: 'falls-city-or',     name: 'Falls City',     county: 'Polk County' },
+  { slug: 'lafayette-or',      name: 'Lafayette',      county: 'Yamhill County' },
+  { slug: 'mcminnville-or',    name: 'McMinnville',    county: 'Yamhill County' },
+  { slug: 'newberg-or',        name: 'Newberg',        county: 'Yamhill County' },
+  { slug: 'sheridan-or',       name: 'Sheridan',       county: 'Yamhill County' },
+  { slug: 'willamina-or',      name: 'Willamina',      county: 'Yamhill County' },
+  { slug: 'yamhill-or',        name: 'Yamhill',        county: 'Yamhill County' },
+  // Marion County
+  { slug: 'aumsville-or',      name: 'Aumsville',      county: 'Marion County' },
+  { slug: 'aurora-or',         name: 'Aurora',         county: 'Marion County' },
+  { slug: 'brooks-or',         name: 'Brooks',         county: 'Marion County' },
+  { slug: 'donald-or',         name: 'Donald',         county: 'Marion County' },
   { slug: 'four-corners-or',   name: 'Four Corners',   county: 'Marion County' },
+  { slug: 'gates-or',          name: 'Gates',          county: 'Marion County' },
   { slug: 'gervais-or',        name: 'Gervais',        county: 'Marion County' },
   { slug: 'hayesville-or',     name: 'Hayesville',     county: 'Marion County' },
   { slug: 'hubbard-or',        name: 'Hubbard',        county: 'Marion County' },
-  { slug: 'independence-or',   name: 'Independence',   county: 'Polk County' },
+  { slug: 'idanha-or',         name: 'Idanha',         county: 'Marion County' },
   { slug: 'jefferson-or',      name: 'Jefferson',      county: 'Marion County' },
   { slug: 'keizer-or',         name: 'Keizer',         county: 'Marion County' },
   { slug: 'marion-or',         name: 'Marion',         county: 'Marion County' },
-  { slug: 'mcminnville-or',    name: 'McMinnville',    county: 'Yamhill County' },
-  { slug: 'millersburg-or',    name: 'Millersburg',    county: 'Linn County' },
-  { slug: 'monmouth-or',       name: 'Monmouth',       county: 'Polk County' },
+  { slug: 'mehama-or',         name: 'Mehama',         county: 'Marion County' },
+  { slug: 'mill-city-or',      name: 'Mill City',      county: 'Marion County' },
   { slug: 'mount-angel-or',    name: 'Mount Angel',    county: 'Marion County' },
-  { slug: 'newberg-or',        name: 'Newberg',        county: 'Yamhill County' },
-  { slug: 'scio-or',           name: 'Scio',           county: 'Linn County' },
-  { slug: 'sheridan-or',       name: 'Sheridan',       county: 'Yamhill County' },
+  { slug: 'salem-or',          name: 'Salem',          county: 'Marion County' },
   { slug: 'silverton-or',      name: 'Silverton',      county: 'Marion County' },
   { slug: 'st-benedict-or',    name: 'St. Benedict',   county: 'Marion County' },
   { slug: 'st-paul-or',        name: 'St. Paul',       county: 'Marion County' },
   { slug: 'stayton-or',        name: 'Stayton',        county: 'Marion County' },
+  { slug: 'sublimity-or',      name: 'Sublimity',      county: 'Marion County' },
   { slug: 'turner-or',         name: 'Turner',         county: 'Marion County' },
-  { slug: 'willamina-or',      name: 'Willamina',      county: 'Yamhill County' },
   { slug: 'woodburn-or',       name: 'Woodburn',       county: 'Marion County' },
-  { slug: 'yamhill-or',        name: 'Yamhill',        county: 'Yamhill County' },
+  // Polk County
+  { slug: 'dallas-or',         name: 'Dallas',         county: 'Polk County' },
+  { slug: 'falls-city-or',     name: 'Falls City',     county: 'Polk County' },
+  { slug: 'grand-ronde-or',    name: 'Grand Ronde',    county: 'Polk County' },
+  { slug: 'independence-or',   name: 'Independence',   county: 'Polk County' },
+  { slug: 'monmouth-or',       name: 'Monmouth',       county: 'Polk County' },
+  { slug: 'rickreall-or',      name: 'Rickreall',      county: 'Polk County' },
+  { slug: 'west-salem-or',     name: 'West Salem',     county: 'Polk County' },
+  // Linn County
+  { slug: 'albany-or',         name: 'Albany',         county: 'Linn County' },
+  { slug: 'brownsville-or',    name: 'Brownsville',    county: 'Linn County' },
+  { slug: 'crawfordsville-or', name: 'Crawfordsville', county: 'Linn County' },
+  { slug: 'halsey-or',         name: 'Halsey',         county: 'Linn County' },
+  { slug: 'harrisburg-or',     name: 'Harrisburg',     county: 'Linn County' },
+  { slug: 'lebanon-or',        name: 'Lebanon',        county: 'Linn County' },
+  { slug: 'lyons-or',          name: 'Lyons',          county: 'Linn County' },
+  { slug: 'millersburg-or',    name: 'Millersburg',    county: 'Linn County' },
+  { slug: 'scio-or',           name: 'Scio',           county: 'Linn County' },
+  { slug: 'sweet-home-or',     name: 'Sweet Home',     county: 'Linn County' },
+  { slug: 'tangent-or',        name: 'Tangent',        county: 'Linn County' },
+  // Benton County
+  { slug: 'adair-village-or',  name: 'Adair Village',  county: 'Benton County' },
+  { slug: 'corvallis-or',      name: 'Corvallis',      county: 'Benton County' },
+  { slug: 'monroe-or',         name: 'Monroe',         county: 'Benton County' },
+  { slug: 'philomath-or',      name: 'Philomath',      county: 'Benton County' },
+  // Lincoln County
+  { slug: 'depoe-bay-or',      name: 'Depoe Bay',      county: 'Lincoln County' },
+  { slug: 'lincoln-city-or',   name: 'Lincoln City',   county: 'Lincoln County' },
+  { slug: 'newport-or',        name: 'Newport',        county: 'Lincoln County' },
+  { slug: 'otis-or',           name: 'Otis',           county: 'Lincoln County' },
+  { slug: 'siletz-or',         name: 'Siletz',         county: 'Lincoln County' },
+  { slug: 'toledo-or',         name: 'Toledo',         county: 'Lincoln County' },
+  { slug: 'waldport-or',       name: 'Waldport',       county: 'Lincoln County' },
+  // Clackamas County
+  { slug: 'canby-or',          name: 'Canby',          county: 'Clackamas County' },
+  { slug: 'colton-or',         name: 'Colton',         county: 'Clackamas County' },
+  { slug: 'estacada-or',       name: 'Estacada',       county: 'Clackamas County' },
+  { slug: 'molalla-or',        name: 'Molalla',        county: 'Clackamas County' },
+  { slug: 'mulino-or',         name: 'Mulino',         county: 'Clackamas County' },
+  { slug: 'oregon-city-or',    name: 'Oregon City',    county: 'Clackamas County' },
+  // Lane County (north edge)
+  { slug: 'coburg-or',         name: 'Coburg',         county: 'Lane County' },
+  { slug: 'eugene-or',         name: 'Eugene',         county: 'Lane County' },
+  { slug: 'junction-city-or',  name: 'Junction City',  county: 'Lane County' },
+  { slug: 'springfield-or',    name: 'Springfield',    county: 'Lane County' },
+  { slug: 'veneta-or',         name: 'Veneta',         county: 'Lane County' },
 ];
 
 /* ----- Shared chrome ----- */
@@ -605,7 +657,6 @@ function schemaFAQ(qas) {
 function head({ title, description, slug }) {
   const canonical = BRAND.site + '/' + (slug === 'index' ? '' : slug);
   return `<meta charset="UTF-8" />
-<base href="/${BRAND.slug}/" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>${title}</title>
 <meta name="description" content="${description}" />
@@ -710,12 +761,37 @@ ${footer()}
 }
 
 /* ---------- Geo landing page (City × Service) ---------- */
-function renderGeoPage({ city, service, kind }) {
-  const keyword = kind === 'furnace' ? 'Furnace Repair' : 'Local HVAC Companies';
-  const slugPrefix = kind === 'furnace' ? 'furnace-repairs' : 'local-hvac';
+const GEO_KINDS = {
+  'furnace':              { keyword: 'Furnace Repair',          slugPrefix: 'furnace-repairs',           desc: 'Same-day furnace repair' },
+  'local-hvac':           { keyword: 'Local HVAC Companies',    slugPrefix: 'local-hvac',                desc: 'Local HVAC contractor' },
+  'ac-repair':            { keyword: 'AC Repair',               slugPrefix: 'ac-repair',                 desc: 'Same-day AC repair, flat-rate diagnostics' },
+  'ac-installation':      { keyword: 'AC Installation',         slugPrefix: 'ac-installation',           desc: '14–21 SEER2 central AC installation' },
+  'ac-maintenance':       { keyword: 'AC Maintenance',          slugPrefix: 'ac-maintenance',            desc: 'Annual AC tune-ups & filter changes' },
+  'furnace-installation': { keyword: 'Furnace Installation',    slugPrefix: 'furnace-installation',      desc: 'Gas & electric furnace installs' },
+  'furnace-maintenance':  { keyword: 'Furnace Maintenance',     slugPrefix: 'furnace-maintenance',       desc: 'Pre-winter furnace tune-ups & combustion analysis' },
+  'heat-pump':            { keyword: 'Heat Pump Service',       slugPrefix: 'heat-pump',                 desc: 'Cold-climate heat pump install, repair & maintenance' },
+  'mini-split':           { keyword: 'Ductless Mini-Split',     slugPrefix: 'ductless-mini-split',       desc: 'Mini-split installs for older homes & ADUs' },
+  'duct-cleaning':        { keyword: 'Air Duct Cleaning',       slugPrefix: 'air-duct-cleaning',         desc: 'NADCA-style duct cleaning & sanitization' },
+  'commercial-hvac':      { keyword: 'Commercial HVAC',         slugPrefix: 'commercial-hvac',           desc: 'RTUs, light commercial systems, scheduled service' },
+  'emergency-hvac':       { keyword: 'Emergency HVAC Service',  slugPrefix: 'emergency-hvac-service',    desc: 'Same-day emergency HVAC, no-heat & no-cool calls' },
+  'hvac-contractor':      { keyword: 'HVAC Contractor',         slugPrefix: 'hvac-contractor',           desc: 'CCB #243211 licensed, bonded, insured HVAC contractor' },
+  'hvac-near-me':         { keyword: 'HVAC Near Me',            slugPrefix: 'hvac-near-me',              desc: 'Local HVAC dispatched from Salem, OR' },
+  'heating-cooling':      { keyword: 'Heating & Cooling',       slugPrefix: 'heating-and-cooling',       desc: 'Full-service heating & cooling: install, repair, maintenance' },
+  // ----- Common typo variants for Google search forgiveness -----
+  'furance-repair':       { keyword: 'Furnace Repair',          slugPrefix: 'furance-repair',            desc: 'Same-day furnace repair (often searched as "furance repair")' },
+  'furnice-repair':       { keyword: 'Furnace Repair',          slugPrefix: 'furnice-repair',            desc: 'Same-day furnace repair (often searched as "furnice repair")' },
+  'hvac-companys':        { keyword: 'HVAC Companies',          slugPrefix: 'hvac-companys',             desc: 'Top-rated HVAC company serving Salem & the mid-Willamette Valley' },
+  'air-conditioning':     { keyword: 'Air Conditioning Service',slugPrefix: 'air-conditioning',          desc: 'Air conditioning install, repair, and maintenance' },
+  'heating-and-air':      { keyword: 'Heating and Air',         slugPrefix: 'heating-and-air',           desc: 'One call for heating and air conditioning' },
+};
+
+function renderGeoPage({ city, kind }) {
+  const meta = GEO_KINDS[kind] || GEO_KINDS['furnace'];
+  const keyword = meta.keyword;
+  const slugPrefix = meta.slugPrefix;
   const slug = `${slugPrefix}-${city.slug}`;
   const title = `${keyword} in ${city.name}, OR — Valley View HVAC`;
-  const description = `${keyword} in ${city.name}, ${city.county}. Same-day service, CCB #${BRAND.ccb} licensed, 10-yr equipment warranty, Energy Trust rebates handled. Call ${BRAND.phone}.`;
+  const description = `${keyword} in ${city.name}, ${city.county}. ${meta.desc}. CCB #${BRAND.ccb} licensed, 10-yr equipment warranty, Energy Trust rebates handled. Call ${BRAND.phone}.`;
   const trail = [
     { name: 'Home', url: BRAND.site + '/' },
     { name: 'Service Areas', url: BRAND.site + '/areas' },
@@ -1061,26 +1137,25 @@ ${footer()}<script src="animations.js" defer></script><script>document.getElemen
 
 /* ---------- Sitemap + robots ---------- */
 function renderSitemap() {
-  const pages = [
-    '', 'services', 'estimator', 'gallery', 'about', 'contact', 'areas',
+  const lastmod = new Date().toISOString().slice(0, 10);
+  const urls = [
+    '',  // home
+    'services', 'estimator', 'gallery', 'about', 'contact', 'areas',
     'faqs', 'reviews', 'blog', 'request-consultation',
     ...SERVICES.map(s => s.slug),
     ...BLOG_POSTS.map(p => p.slug),
-    ...CITIES.map(c => `furnace-repairs-${c.slug}`),
-    ...CITIES.map(c => `local-hvac-${c.slug}`),
-    // original city pages from the areas build
-    'salem','keizer','albany','dallas','mcminnville','molalla','stayton','independence','woodburn','monmouth'
   ];
-  const today = new Date().toISOString().slice(0,10);
-  const urls = [...new Set(pages)].map(p => {
-    const loc = BRAND.site + '/' + p;
-    return `  <url><loc>${loc}</loc><lastmod>${today}</lastmod><changefreq>monthly</changefreq><priority>${p === '' ? '1.0' : '0.7'}</priority></url>`;
-  }).join('\n');
+  // Add ALL city x kind geo pages
+  CITIES.forEach(city => {
+    Object.keys(GEO_KINDS).forEach(kind => {
+      urls.push(`${GEO_KINDS[kind].slugPrefix}-${city.slug}`);
+    });
+  });
+  const entries = urls.map(u => `  <url><loc>https://valleyviewhvac.com/${u}</loc><lastmod>${lastmod}</lastmod><changefreq>monthly</changefreq><priority>${u === '' ? '1.0' : '0.7'}</priority></url>`).join('\n');
   return `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-${urls}
-</urlset>
-`;
+${entries}
+</urlset>`;
 }
 
 function renderRobots() {
@@ -1098,12 +1173,17 @@ SERVICES.forEach(s => {
   console.log('wrote', s.slug + '.html');
 });
 
-// Geo landing pages — furnace + local-hvac variants × 30 cities
+// Geo landing pages — every (city × kind) combination
+let geoCount = 0;
 CITIES.forEach(city => {
-  fs.writeFileSync(path.join(DIR, `furnace-repairs-${city.slug}.html`), renderGeoPage({ city, kind: 'furnace' }));
-  fs.writeFileSync(path.join(DIR, `local-hvac-${city.slug}.html`), renderGeoPage({ city, kind: 'local-hvac' }));
+  Object.keys(GEO_KINDS).forEach(kind => {
+    const meta = GEO_KINDS[kind];
+    const slug = `${meta.slugPrefix}-${city.slug}`;
+    fs.writeFileSync(path.join(DIR, `${slug}.html`), renderGeoPage({ city, kind }));
+    geoCount++;
+  });
 });
-console.log('wrote', CITIES.length * 2, 'geo pages');
+console.log('wrote', geoCount, 'geo pages (' + CITIES.length + ' cities × ' + Object.keys(GEO_KINDS).length + ' kinds)');
 
 // Utility pages
 fs.writeFileSync(path.join(DIR, 'faqs.html'), renderFAQ());
