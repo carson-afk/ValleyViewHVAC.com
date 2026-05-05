@@ -4,7 +4,41 @@
 <title>Service Areas — Valley View HVAC</title>
 <meta name="description" content="Valley View HVAC serves Salem, Albany, Dallas, McMinnville, Molalla, Stayton, Independence, Woodburn, Keizer, and Monmouth across the mid-Willamette Valley." />
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet"><link rel="stylesheet" href="styles.css" /></head><body>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet"><link rel="stylesheet" href="styles.css" /><!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-JJK0PCTRPS"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-JJK0PCTRPS');
+
+  // Track phone link clicks
+  document.addEventListener('click', function(e) {
+    var a = e.target.closest && e.target.closest('a[href^="tel:"]');
+    if (a) {
+      gtag('event', 'click_phone', {
+        event_category: 'engagement',
+        event_label: 'Phone Number Click',
+        value: 1.0,
+        currency: 'USD'
+      });
+    }
+  });
+
+  // Track form submissions (FormSubmit / lead generation)
+  document.addEventListener('submit', function(e) {
+    var f = e.target;
+    if (f && f.tagName === 'FORM' && f.action && f.action.indexOf('formsubmit.co') !== -1) {
+      gtag('event', 'generate_lead', {
+        event_category: 'lead',
+        event_label: 'Quote Form Submission',
+        value: 1.0,
+        currency: 'USD'
+      });
+    }
+  });
+</script>
+</head><body>
 <div class="discount-banner" role="region" aria-label="Community discount">
   <div class="wrap">
     <span class="db-badge"><span class="db-pct">10%</span><span class="db-off">OFF</span></span>

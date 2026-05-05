@@ -4,7 +4,41 @@
 <title>HVAC in Salem, OR — Valley View HVAC</title>
 <meta name="description" content="Licensed HVAC contractor for Salem, Marion County. Heat pumps, furnaces, AC, ductless. CCB #243211, 10-yr equipment warranty, community discounts." />
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet"><link rel="stylesheet" href="styles.css" /></head><body><header class="nav">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet"><link rel="stylesheet" href="styles.css" /><!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-JJK0PCTRPS"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-JJK0PCTRPS');
+
+  // Track phone link clicks
+  document.addEventListener('click', function(e) {
+    var a = e.target.closest && e.target.closest('a[href^="tel:"]');
+    if (a) {
+      gtag('event', 'click_phone', {
+        event_category: 'engagement',
+        event_label: 'Phone Number Click',
+        value: 1.0,
+        currency: 'USD'
+      });
+    }
+  });
+
+  // Track form submissions (FormSubmit / lead generation)
+  document.addEventListener('submit', function(e) {
+    var f = e.target;
+    if (f && f.tagName === 'FORM' && f.action && f.action.indexOf('formsubmit.co') !== -1) {
+      gtag('event', 'generate_lead', {
+        event_category: 'lead',
+        event_label: 'Quote Form Submission',
+        value: 1.0,
+        currency: 'USD'
+      });
+    }
+  });
+</script>
+</head><body><header class="nav">
   <a href="index.html" class="nav-brand"><img class="mark" src="https://lh3.googleusercontent.com/d/1oEo3tFVFCspVWwUCMgyz49gkMNJ11pue=w200" alt="Valley View HVAC logo" /><span class="tm">Valley View HVAC<small>CCB #243211 · salem + surrounding</small></span></a>
   <nav class="nav-links">
     <a href="index.html">Home</a><a href="services.html">Services</a><a href="estimator.html">Get Estimate</a><a href="gallery.html">Work</a><a href="areas.html">Service Areas</a><a href="about.html">About</a><a href="contact.html">Contact</a>
