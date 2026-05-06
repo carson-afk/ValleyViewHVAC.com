@@ -1,4 +1,34 @@
 {
   "cleanUrls": true,
-  "trailingSlash": false
+  "trailingSlash": false,
+  "redirects": [
+    {
+      "source": "/contact/local-hvac-companies-service-area/:city",
+      "destination": "/furnace-repairs-:city",
+      "permanent": true
+    },
+    {
+      "source": "/contact/local-hvac-companies-service-area",
+      "destination": "/areas",
+      "permanent": true
+    },
+    {
+      "source": "/contact/furnace-repairs-service-area/:city",
+      "destination": "/furnace-repairs-:city",
+      "permanent": true
+    },
+    {
+      "source": "/contact/furnace-repairs-service-area",
+      "destination": "/furnace-repair",
+      "permanent": true
+    },
+    { "source": "/financing", "destination": "/customer-savings-plans", "permanent": true },
+    { "source": "/finance", "destination": "/customer-savings-plans", "permanent": true },
+    { "source": "/commercial-services", "destination": "/commercial-hvac-services", "permanent": true },
+    { "source": "/residential-services", "destination": "/residential-hvac-services", "permanent": true },
+    { "source": "/hvac-products", "destination": "/services", "permanent": true },
+    { "source": "/request-service", "destination": "/request-consultation", "permanent": true },
+    { "source": "/locations", "destination": "/areas", "permanent": true },
+    { "source": "/first-last", "destination": "/", "permanent": true }
+  ]
 }

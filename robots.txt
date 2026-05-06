@@ -1,3 +1,4 @@
 User-agent: *
-Allow: /valleyviewhvac/
+Allow: /
+
 Sitemap: https://valleyviewhvac.com/sitemap.xml
