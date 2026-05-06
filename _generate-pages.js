@@ -1160,7 +1160,8 @@ ${entries}
 
 function renderRobots() {
   return `User-agent: *
-Allow: /${BRAND.slug}/
+Allow: /
+
 Sitemap: ${BRAND.site}/sitemap.xml
 `;
 }
